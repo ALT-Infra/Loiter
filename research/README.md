@@ -8,7 +8,7 @@ This repository currently contains the drone autonomy research atlas. The simula
 
 Clone this repository and open [drone-autonomy-atlas.html](drone-autonomy-atlas.html) in a browser. The file works offline without installation or a web server; external source links require internet access.
 
-The atlas includes assembled autonomy systems, focused components. It contains 159 project records and 126 sourced relationships.
+The atlas includes assembled autonomy systems and focused components. It contains 159 project records and 126 sourced relationships.
 
 ## Repository contents
 

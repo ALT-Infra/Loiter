@@ -1945,17 +1945,6 @@ dialog::backdrop {
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
 .mode-switch button {
   padding-left: 12px;
   padding-right: 12px;
@@ -2007,15 +1996,8 @@ dialog::backdrop {
   #workspace {
     height: calc(100dvh - 110px);
   }
-  
 }
 @media (max-width: 580px) {
-  
-  
-  
-  
-  
-  
   .mode-switch button {
     font-size: 12px;
     padding: 8px 3px;

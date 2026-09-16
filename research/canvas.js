@@ -482,9 +482,7 @@ function edgeHTML(item, i, map) {
   }
   return `<g class="edge" tabindex="0" role="button" data-edge="${e.id}" data-a="${e.a}" data-b="${e.b}" aria-label="${esc(P.get(e.a).name + " " + e.type.toLowerCase() + " " + P.get(e.b).name + ". Inspect evidence.")}" ><title>${esc(e.type + ": " + e.note)}</title><path class="hit" d="${path}"/><path class="line" stroke="${t.color}" stroke-dasharray="${t.dash}" marker-end="url(#arrow-${t.class})" d="${path}"/></g>`;
 }
-
 function draw() {
-  
   buildScene();
   const frame = $("#frames"),
     nodes = $("#nodes"),
@@ -630,10 +628,7 @@ function relationHTML(e, id) {
   return `<div class="relation-row"><div class="relation-type"><span class="line-sample ${TYPES[e.type].class}"></span> ${esc(direction)}</div><button class="text-project" data-project="${other(e, id)}">${esc(P.get(other(e, id)).name)}</button><p>${esc(e.note)}</p>${link(e.source, "Inspect relationship evidence")}</div>`;
 }
 function switchMode(mode, id = null) {
-  
-  
   if (mode === S.mode && !id) {
-    
     return;
   }
   remember();
@@ -692,7 +687,6 @@ function selectProject(
   syncHash();
 }
 function locate(id, { record = true } = {}) {
-  
   const p = P.get(id);
   if (!p) return;
   if (record) remember();
@@ -816,7 +810,6 @@ function syncHash() {
   history.replaceState(null, "", "#" + parts.join("/"));
 }
 function fromHash() {
-  
   const [mode, part, id] = location.hash.slice(1).split("/");
   if (["assembled", "focused"].includes(mode)) S.mode = mode;
   else if (mode === "map" && P.has(part)) {
@@ -1517,7 +1510,6 @@ for (const dialog of [$("#finder"), $("#sheet")])
 window.addEventListener("resize", () => {
   clearTimeout(resizeTimer);
   resizeTimer = setTimeout(() => {
-    
     if (innerWidth <= 580) S.index = false;
     draw();
     fitCurrent();
